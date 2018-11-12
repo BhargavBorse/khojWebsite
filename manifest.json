@@ -1,6 +1,6 @@
 {
-    "name" : "Reminder & Event in Group",
-    "short_name" : "REIG",
+    "name" : "Skin",
+    "short_name" : "Skin",
     "icons" : [
         {
             "src" : "/src/images/icons/app-icon-48x48.png",
