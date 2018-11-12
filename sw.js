@@ -1,32 +1,8 @@
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').then(function(registration) {
-            // Registration was successful
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function(err) {
-            // registration failed :(
-            console.log('ServiceWorker registration failed: ', err);
-        });
-    });
-}
-
-self.addEventListener('install', function(event) {
-    // Perform install steps
-    
-    var CACHE_NAME = 'my-site-cache-v1';
-    var urlsToCache = [
-        '/',
-        '/index.html'
-    ];
-    
-    self.addEventListener('install', function(event) {
-        // Perform install steps
-        event.waitUntil(
-            caches.open(CACHE_NAME)
-            .then(function(cache) {
-                console.log('Opened cache');
-                return cache.addAll(urlsToCache);
-            })
-            );
-        });
-    });
+self.addEventListener('install', event => {
+    console.log('Service worker installing...');
+    // Add a call to skipWaiting here
+  });
+  
+  self.addEventListener('activate', event => {
+    console.log('Service worker activating...');
+  });
