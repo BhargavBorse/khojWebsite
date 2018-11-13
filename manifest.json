@@ -46,5 +46,8 @@
     "theme_color" : "black",
     "description" : "A simple reminder app. (incomplete)",
     "dir" : "ltr",
-    "lang" : "en-US"  
+    "lang" : "en-US",  
+
+    "gcm_sender_id": "482941778795",
+  "gcm_sender_id_comment": "Do not change the GCM Sender ID"
 }
