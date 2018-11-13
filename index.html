@@ -11,19 +11,7 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon.png">
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<script>
-		if ('serviceWorker' in navigator) {
-			window.addEventListener('load', () => {
-				navigator.serviceWorker.register('sw.js')
-				.then(registration => {
-					console.log('Service Worker is registered', registration);
-				})
-				.catch(err => {
-					console.error('Registration failed:', err);
-				});
-			});
-		}
-	</script>
+	
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -58,6 +46,17 @@
 	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 -->
 <script data-cfasync="false" data-bablic="5be96bc6afcafb0001ffae6b" data-bablic-m="[0,'en','en',1,[],0,0,0,0,0,0,0,0,[],'kind-lovelace-e68783.netlify.com/',[],['_v',2]]" src="//cdn2.bablic.com/js/bablic.3.9.js"></script>
+
+<!-- PushAlert -->
+<script type="text/javascript">
+	(function(d, t) {
+			var g = d.createElement(t),
+			s = d.getElementsByTagName(t)[0];
+			g.src = "https://cdn.pushalert.co/integrate_be6068962e8f9f76bed2458295aef962.js";
+			s.parentNode.insertBefore(g, s);
+	}(document, "script"));
+</script>
+<!-- End PushAlert -->
 </head>
 <body>
 	<!-- banner -->

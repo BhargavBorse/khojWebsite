@@ -1,3 +1,5 @@
+importScripts("https://cdn.pushalert.co/sw-7512.js");
+
 
 		if ('serviceWorker' in navigator) {
 			window.addEventListener('load', () => {
