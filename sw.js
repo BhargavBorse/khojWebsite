@@ -70,4 +70,4 @@ self.addEventListener('install', event => {
   
       })
     );
-  });
+  });  
