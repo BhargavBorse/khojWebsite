@@ -26,3 +26,27 @@ self.addEventListener('install', event => {
   self.addEventListener('fetch', event => {
     console.log('Fetching:', event.request.url);
   });
+
+  const filesToCache = [
+    '/',
+    'css/style.css',
+    'css/bootstrap.css',
+    'images/arr.png',
+    'images/close.png',
+    'images/b1.jpg',
+    'js/move-top.js',
+    'js/jquery-2.2.3.min.js',
+    'index.html'
+  ];
+  
+  const staticCacheName = 'pages-cache-v1';
+  
+  self.addEventListener('install', event => {
+    console.log('Attempting to install service worker and cache static assets');
+    event.waitUntil(
+      caches.open(staticCacheName)
+      .then(cache => {
+        return cache.addAll(filesToCache);
+      })
+    );
+  });
